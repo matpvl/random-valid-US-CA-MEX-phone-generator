@@ -79,6 +79,35 @@ MEXICO_REGIONAL_NUMBERS = [55,
                            899,
                            868]
 
+BRAZIL_REGIONAL_NUMBERS = [91,73,21,
+                           62,11,71,
+                           62,47,55,
+                           79,83,91,
+                           14,32,11,
+                           91,19,13,
+                           31,43,11,
+                           95,96,21,
+                           61,82,21,
+                           19,92,12,
+                           67,44,17,
+                           51,11,98,
+                           11,38,11,
+                           27,11,13,
+                           54,84,27,
+                           31,21,15,
+                           65,21,12,
+                           41,81,86,
+                           11,81,34,
+                           21,53,34,
+                           75,24,65,
+                           48,19,27,
+                           85,51,27,
+                           45,69,77,
+                           16,81,24,
+                           62,16,
+                           11,68,
+                           ]
+
 
 def RandomUSCAPhone():
     number = '+1'
@@ -93,6 +122,15 @@ def RandomMEXPhone():
     number = '+52'
     number += str(random.choice(MEXICO_REGIONAL_NUMBERS))
     the_rest = random.randrange(0000000, 9999999)
+    number += str(the_rest)
+    print(number)
+    return number
+  
+ 
+def RandomBRPhone():
+    number = '+55'
+    number += str(random.choice(BRAZIL_REGIONAL_NUMBERS))
+    the_rest = random.randrange(00000000, 99999999)
     number += str(the_rest)
     print(number)
     return number
